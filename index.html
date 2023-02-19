@@ -33,29 +33,34 @@
           class="image"
           src="./images/desktop-wallpaper-dasavatharam-dasavathaaram-thumbnail.jpg"
           alt="avatar"
+          id="images"
         />
-        <div class="music-track">
-          <input type="range" class="track" />
+        <div class="range-slider">
+          <input type="range" class="slider" min="0" max="5.0" id="track" />
+          <!-- <div class="slider-thumb">
+            <div class="tooltip"></div>
+          </div> -->
+          <div class="progress"></div>
         </div>
       </div>
       <!-- button container -->
       <div class="button-container">
-        <button class="btn previous">
+        <button class="btn previous" id="previous" onclick="previousSong()">
           <i class="fa-sharp fa-solid fa-backward-step"></i>
         </button>
 
-        <button class="btn play-puse">
+        <button class="btn play-pause" id="play-pause" onclick="justPlay()">
           <i class="fa-sharp fa-solid fa-play"></i>
         </button>
 
-        <button class="btn next">
+        <button class="btn next" id="next" onclick="nextSong()">
           <i class="fa-sharp fa-solid fa-forward-step"></i>
         </button>
       </div>
       <!-- songs-name singer-name -->
       <div class="title-container">
-        <h2 class="song-name">உலக நாயகனே கண்டங்கள் கண்டு வியக்கும்...</h2>
-        <h3 class="singer-name">Vinit Singh,Music by : Himesh Reshammiya.</h3>
+        <h2 class="song-name" id="song-name">உலக நாயகனே...</h2>
+        <h3 class="singer-name" id="singer-name">Vinit Singh</h3>
       </div>
     </main>
 

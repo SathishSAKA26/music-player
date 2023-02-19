@@ -43,7 +43,7 @@ body {
   width: 100%;
   height: 100vh;
   font-family: "Fira Sans Condensed", sans-serif;
-  background-color: var(--clr-ultra-violet);
+  background-color: var(--clr-blue-munsell);
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -67,26 +67,48 @@ li {
 }
 
 .main-container {
-  width: 65%;
+  width: 75%;
   min-height: 50vh;
   /* border: 2px solid var(--clr-amaranth-purple); */
   border-radius: 15px;
-  background-color: #0090adbd;
-  box-shadow: 6px 6px 20px var(--clr-chef-chaouen-blue);
+  background-color: var(--clr-amaranth-purple);
+  box-shadow: 6px 6px 20px var(--clr-amaranth-purple);
 }
 
 .image {
-  width: 85%;
+  width: 90%;
   margin: 0 auto;
   border-bottom-left-radius: 100px;
   border-bottom-right-radius: 100px;
 }
 
-.track {
-  width: 100%;
-  margin: 0.5rem auto;
+/* range design */
+.range-slider {
+  max-width: 38em;
+  position: relative;
+  margin: 1rem auto;
+  display: flex;
 }
 
+.range-slider .slider {
+  width: 100%;
+  height: 0.4em;
+  outline: none;
+  border-radius: 3px;
+  background-color: #000;
+  box-shadow: 3px 3px 6px #000, inset 1px 1px #909090;
+  cursor: pointer;
+}
+
+.range-slider.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 1.7em;
+  height: 1.7em;
+  cursor: pointer;
+  position: relative;
+}
+
+/* button container */
 .button-container {
   display: flex;
   align-items: center;
@@ -95,10 +117,72 @@ li {
 
 .btn {
   font-size: 1.5rem;
-  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+
+  cursor: pointer;
+}
+
+button {
+  margin: 0.1rem 1.2rem;
+  height: 40px;
+  width: 40px;
+  border-radius: 10px;
+  background: var(--clr-chef-chaouen-blue);
+  justify-content: center;
+  align-items: center;
+  box-shadow: -5px -5px 10px var(--clr-cerulean),
+    5px 5px 10px var(--clr-chef-chaouen-blue),
+    inset 5px 5px 10px var(--clr-cerulean),
+    inset -5px -5px 10px var(--clr-chef-chaouen-blue);
+  font-family: "Damion", cursive;
+  border: none;
+  font-size: 10px;
+  color: rgb(161, 161, 161);
+  transition: 500ms;
+}
+
+button:hover {
+  box-shadow: -5px -5px 10px var(--clr-chef-chaouen-blue),
+    5px 5px 10px var(--clr-neon-blue), inset 5px 5px 10px var(--clr-neon-blue),
+    inset -5px -5px 10px var(--clr-chef-chaouen-blue);
+  color: var(--clr-oxford-blue);
+  transition: 500ms;
+}
+
+.play-pause {
+  border-radius: 50%;
   display: flex;
   align-items: center;
 }
 
-.play-pause {
+.previous {
+  border-top-left-radius: 100%;
+}
+
+.next {
+  border-top-right-radius: 100%;
+}
+
+/* name container */
+.title-container {
+  font-size: 1rem;
+  width: 100%;
+  text-align: center;
+  padding: 0.4rem 1rem;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: #cfcece;
+}
+
+/* mobile design */
+@media screen and (min-width: 768px) {
+  body {
+    width: 40%;
+    height: 100vh;
+    margin: 0 auto;
+  }
+
+  .image {
+    width: 70%;
+  }
 }
