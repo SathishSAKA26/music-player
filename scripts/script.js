@@ -35,7 +35,7 @@ let allSong = [
     artist: "Stephen Zechariah",
   },
   {
-    name: "வாத்தி வருகிறாள்...",
+    name: "வாத்தி coming...",
     path: "audio/song3.mp3.mp3",
     img: "images/img3.jpg.jpg",
     artist: "Anirudh Ravichander",
