@@ -68,7 +68,7 @@ li {
 
 .main-container {
   width: 75%;
-  min-height: 50vh;
+  min-height: 83vh;
   /* border: 2px solid var(--clr-amaranth-purple); */
   border-radius: 15px;
   background-color: var(--clr-amaranth-purple);
@@ -76,7 +76,7 @@ li {
 }
 
 .image {
-  width: 90%;
+  max-width: 80%;
   margin: 0 auto;
   border-bottom-left-radius: 100px;
   border-bottom-right-radius: 100px;
@@ -85,7 +85,6 @@ li {
 /* range design */
 .range-slider {
   max-width: 38em;
-  position: relative;
   margin: 1rem auto;
   display: flex;
 }
@@ -105,7 +104,6 @@ li {
   width: 1.7em;
   height: 1.7em;
   cursor: pointer;
-  position: relative;
 }
 
 /* button container */
